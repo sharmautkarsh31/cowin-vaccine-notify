@@ -1,0 +1,2 @@
+MIN_AGE_LIMIT = 18
+SLEEP_TIME = 60 # in seconds
