@@ -8,14 +8,6 @@
 <img src="image/cowin_ss.png" alt="Cowin_ss">
 
 ### Installation
-* create virtualenv
-  ```sh
-  virtualenv cowin_env
-  ```
-* activate env
-  ```sh
-  source cowin_env/bin/python3
-  ```
 
 1. Create virtualenv
   ```sh
@@ -26,9 +18,9 @@
   source cowin_env/bin/python3
   ```
 3. Install pip packages
-   ```sh
-   pip3 install -r requirements.txt
-   ```
+```sh
+  pip3 install -r requirements.txt
+  ```
 
 
 <!-- USAGE EXAMPLES -->
