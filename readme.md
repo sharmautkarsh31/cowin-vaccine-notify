@@ -4,7 +4,7 @@
 1. Python3
 2. Virtualenv
 3. Find your district code from https://www.cowin.gov.in as shown below and put it in config.py file:
-<img src="image/cowin_ss.png" alt="Cowin_ss" width="80" height="80">
+<img src="image/cowin_ss.png" alt="Cowin_ss">
 
 ### Installation
 * create virtualenv
