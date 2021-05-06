@@ -33,5 +33,7 @@
    python3 src/main.py
    ```
 You will hear rooster alarm when the vaccine slots are available in your district.
+
 Look at the output of the script which has details about the centres. 
-Hurry up, go and book your slot.
+
+#### Hurry up, go and book your slot.
