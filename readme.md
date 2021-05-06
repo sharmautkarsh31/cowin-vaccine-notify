@@ -39,4 +39,4 @@ Run main.py
    ```sh
    python3 src/main.py
    ```
-You will hear alarm when the vaccine slots are available in selecte district.
+You will hear rooster alarm when the vaccine slots are available in your district.
