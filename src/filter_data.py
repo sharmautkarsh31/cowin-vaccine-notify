@@ -21,9 +21,16 @@ def filter(data):
         }
         for session in session_data:
             if session.get('min_age_limit', 1000) <= MIN_AGE_LIMIT and session.get('available_capacity', 0)>0:
-                print(datetime.datetime.now(tz=pytz.timezone('Asia/Kolkata')).strftime('%H:%M:%S.%f %Y-%m-%d'),
+                print(datetime.datetime.now(tz=pytz.timezone('Asia/Kolkata')).strftime('%H:%M:%S %Y-%m-%d'),
                       "FOUND MATCHING CENTER")
-                print(center_details, session)
+                print("center_id: ", center_details['center_id'],
+                      "\nname: ", center_details['name'],
+                      '\nblock_name: ', center_details['block_name'],
+                      '\npincode: ', center_details['pincode'],
+                      '\ndistrict_name: ', center_details['district_name'],
+                      '\nfee_type: ', center_details['fee_type'],
+                      '\n\n'
+                      )
                 res.append({**center_details, **session})
 
     return res
