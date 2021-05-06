@@ -3,7 +3,8 @@
 ### Prerequisites
 1. Python3
 2. Virtualenv
-3. Find your district code from https://www.cowin.gov.in as shown below and put it in config.py file:
+3. Pip
+4. Find your district code from https://www.cowin.gov.in as shown below and put it in config.py file:
 <img src="image/cowin_ss.png" alt="Cowin_ss">
 
 ### Installation
