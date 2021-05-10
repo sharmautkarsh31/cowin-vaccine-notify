@@ -26,11 +26,11 @@
 
 1. Update config.py file with 
    
-a. MIN_AGE_LIMIT
-   
-b. For search using District --> DISTRICT_ID and SEARCH_BY = 'DISTRICT'
-   
-c. For search using Pin code --> PINCODE and SEARCH_BY = 'PINCODE'
+         a. MIN_AGE_LIMIT(18 or 45)
+            
+         b. For search using District --> DISTRICT_ID and SEARCH_BY = 'DISTRICT'
+            
+         c. For search using Pin code --> PINCODE and SEARCH_BY = 'PINCODE'
    
 2. Run main.py
 
