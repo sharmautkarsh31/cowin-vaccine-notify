@@ -5,7 +5,7 @@ from fetch_cowin_data import fetch_data
 from filter_data import filter
 from playsound import playsound
 from config import DISTRICT_ID
-from src.constants import SLEEP_TIME
+from constants import SLEEP_TIME
 
 
 def process(search_code):
