@@ -1,16 +1,18 @@
 import os
 import time
 from config import SEARCH_BY, PINCODE
-from fetch_cowin_data import fetch_data, SLEEP_TIME
+from fetch_cowin_data import fetch_data
 from filter_data import filter
 from playsound import playsound
 from config import DISTRICT_ID
+from src.constants import SLEEP_TIME
+
 
 def process(search_code):
     data = fetch_data(search_code)
     matched_sessions = filter(data)
     if matched_sessions:
-        playsound('/Users/utkarshsharma/Desktop/CoWin/Rooster.mp3')
+        playsound('Rooster.mp3')
     else:
         print("No Match found")
 

@@ -1,16 +1,26 @@
 import os
+import time
 
+import pytz
 import requests
 import urllib.parse
 import traceback
-from datetime import datetime
-from constants import *
-from config import SEARCH_BY
+import datetime
+from constants import BASE_URL, DISTRICT_SEARCH_URL, PINCODE_SEARCH_URL, TIMEZONE
+from config import SEARCH_BY, DATE
 
 
 def get_date():
-    dt = datetime.now()
-    return  dt.strftime("%d-%m-%Y")
+    dt = datetime.datetime.now(tz=pytz.timezone(TIMEZONE))
+    today = dt.strftime("%d-%m-%Y")
+    today_timestamp = dt.timestamp()
+    entered_date_timestamp = time.mktime(datetime.datetime.strptime(DATE,
+                                             "%d-%m-%Y").timetuple())
+
+    if today_timestamp < entered_date_timestamp:
+        return DATE
+    else:
+        return today
 
 def get_url(search_code):
     search_by = os.environ.get('SEARCH_BY', SEARCH_BY)
