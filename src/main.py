@@ -1,13 +1,13 @@
 import os
 import time
-from config import SLEEP_TIME
+from config import SLEEP_TIME, SEARCH_BY, PINCODE
 from fetch_cowin_data import fetch_data
 from filter_data import filter
 from playsound import playsound
 from config import DISTRICT_ID
 
-def process(district_code):
-    data = fetch_data(district_code)
+def process(search_code):
+    data = fetch_data(search_code)
     matched_sessions = filter(data)
     if matched_sessions:
         playsound('/Users/utkarshsharma/Desktop/CoWin/Rooster.mp3')
@@ -15,10 +15,14 @@ def process(district_code):
         print("No Match found")
 
 def main():
-    district_code = os.environ.get('DISTRICT_CODE', DISTRICT_ID)
+    search_by = os.environ.get('SEARCH_BY', SEARCH_BY)
+    if search_by != 'PINCODE':
+        search_code = os.environ.get('DISTRICT_CODE', DISTRICT_ID)
+    else:
+        search_code = os.environ.get('PINCODE', PINCODE)
     while True:
         print("Starting Process")
-        process(district_code)
+        process(search_code)
         print("Sleeping for {} seconds".format(SLEEP_TIME))
         time.sleep(SLEEP_TIME)
 

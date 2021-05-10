@@ -27,6 +27,7 @@ def filter(data):
                       "\nname: ", center_details['name'],
                       '\nblock_name: ', center_details['block_name'],
                       '\npincode: ', center_details['pincode'],
+                      '\naddress: ', center_details['address'],
                       '\ndistrict_name: ', center_details['district_name'],
                       '\nfee_type: ', center_details['fee_type'],
                       '\n\n'
