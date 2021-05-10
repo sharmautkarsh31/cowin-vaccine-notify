@@ -1,7 +1,7 @@
 import os
 import time
-from config import SLEEP_TIME, SEARCH_BY, PINCODE
-from fetch_cowin_data import fetch_data
+from config import SEARCH_BY, PINCODE
+from fetch_cowin_data import fetch_data, SLEEP_TIME
 from filter_data import filter
 from playsound import playsound
 from config import DISTRICT_ID

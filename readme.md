@@ -4,8 +4,6 @@
 1. Python3
 2. Virtualenv
 3. Pip
-4. Find your district code from https://www.cowin.gov.in as shown below and put it in config.py file:
-<img src="image/cowin_ss.png" alt="Cowin_ss">
 
 ### Installation
 
@@ -26,7 +24,11 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Update config.py file with MIN_AGE_LIMIT and DISTRICT_ID
+1. Update config.py file with 
+   a. MIN_AGE_LIMIT
+   b. For search using District --> DISTRICT_ID and SEARCH_BY = 'DISTRICT'
+   c. For search using Pin code --> PINCODE and SEARCH_BY = 'PINCODE'
+   
 2. Run main.py
 
    ```sh
