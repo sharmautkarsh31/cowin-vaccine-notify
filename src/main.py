@@ -12,7 +12,7 @@ def process(search_code):
     data = fetch_data(search_code)
     matched_sessions = filter(data)
     if matched_sessions:
-        playsound('../Rooster.mp3')
+        playsound("Rooster.mp3")
     else:
         print("No Match found")
 
