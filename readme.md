@@ -4,6 +4,8 @@
 1. Python3
 2. Virtualenv
 3. Pip
+4. If you want to book If you want to search the vaccines by district, you find your district code from https://www.cowin.gov.in as shown below and put it in config.py file:
+<img src="image/cowin_ss.png" alt="Cowin_ss">
 
 ### Installation
 
@@ -24,7 +26,7 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-1. Update config.py file with 
+1. Update src/config.py file with 
    
          a. MIN_AGE_LIMIT(18 or 45)
             
