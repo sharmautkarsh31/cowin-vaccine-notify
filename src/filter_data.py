@@ -4,10 +4,11 @@ import pytz as pytz
 
 from config import MIN_AGE_LIMIT, SEARCH_BY, PINCODE, DISTRICT_ID
 
+location = PINCODE if SEARCH_BY == 'PINCODE' else DISTRICT_ID
 
 def filter(data):
     data = data.get('centers', [])
-    print("Found details of %s centers at %s:%s"% ( str(len(data)), SEARCH_BY, PINCODE if SEARCH_BY == 'PINCODE' else DISTRICT_ID))
+    print("Found details of %s centers at %s:%s"% ( str(len(data)), SEARCH_BY, location))
     res = []
     for center_data in data:
         session_data = center_data.get('sessions', [])
