@@ -44,3 +44,5 @@ You will hear rooster alarm when the vaccine slots are available in your distric
 Look at the output of the script which has details about the centres. 
 
 #### Hurry up, go and book your slot.
+
+PS: Special thanks to <a href='https://github.com/pankhuriagarwal94/'>Pankhuri</a> for providing the initial code
