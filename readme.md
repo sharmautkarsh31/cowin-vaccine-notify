@@ -11,12 +11,19 @@
 
 1. Create virtualenv
   ```sh
-  virtualenv cowin_env
+  python3 -m venv venv
   ```
-2. Activate env
+2. Activate env<br>
+* For linux:
+
   ```sh
-  source cowin_env/bin/python3
+  source venv/bin/python3
   ```
+*  For Windows:
+   ```sh
+   <Absolute path to venv>/bin/activate
+   ```
+
 3. Install pip packages
 ```sh
   pip3 install -r requirements.txt

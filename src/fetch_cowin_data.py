@@ -6,8 +6,8 @@ import requests
 import urllib.parse
 import traceback
 import datetime
-from constants import BASE_URL, DISTRICT_SEARCH_URL, PINCODE_SEARCH_URL, TIMEZONE
-from config import SEARCH_BY, DATE
+from constants import BASE_URL, DISTRICT_SEARCH_URL, PINCODE_SEARCH_URL, TIMEZONE, VACCINE_MAP
+from config import SEARCH_BY, DATE, VACCINE_PREFERENCE
 
 
 def get_date():
@@ -28,6 +28,8 @@ def get_url(search_code):
         url = urllib.parse.urljoin(BASE_URL, DISTRICT_SEARCH_URL.format(search_code, get_date()))
     else:
         url = urllib.parse.urljoin(BASE_URL, PINCODE_SEARCH_URL.format(search_code, get_date()))
+    if VACCINE_PREFERENCE != '':
+        url += "&vaccine={}".format(VACCINE_MAP[VACCINE_PREFERENCE])
     return url
 
 def fetch_data(search_code):
