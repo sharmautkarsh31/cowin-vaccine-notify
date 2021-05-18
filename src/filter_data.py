@@ -2,10 +2,11 @@ import datetime
 
 import pytz as pytz
 
-from config import MIN_AGE_LIMIT, SEARCH_BY, PINCODE, DISTRICT_ID, DOSE_TYPE, VACCINE_PREFERENCE
-from src.constants import DOSE_TYPE_MAP, VACCINE_MAP
+from config import MIN_AGE_LIMIT, SEARCH_BY, PINCODE, DISTRICT_ID, DOSE_TYPE, VACCINE_PREFERENCE, BULK_NOTIFY_ONLY
+from src.constants import DOSE_TYPE_MAP, VACCINE_MAP, BULK_NOTIFY_MAP
 
 location = PINCODE if SEARCH_BY == 'PINCODE' else DISTRICT_ID
+
 
 def filter(data):
     data = data.get('centers', [])
@@ -24,13 +25,13 @@ def filter(data):
         }
         for session in session_data:
             if VACCINE_PREFERENCE == '' or VACCINE_PREFERENCE == 0 or VACCINE_PREFERENCE == None:
-                if session.get('min_age_limit', 1000) <= MIN_AGE_LIMIT and session.get(DOSE_TYPE_MAP[DOSE_TYPE], 0)>0 \
+                if session.get('min_age_limit', 1000) <= MIN_AGE_LIMIT and session.get(DOSE_TYPE_MAP[DOSE_TYPE],0) > BULK_NOTIFY_MAP[BULK_NOTIFY_ONLY] \
                         and center_details['fee_type'] != 'Paid':
                     print_data_on_console(center_details)
                     res.append({**center_details, **session})
             else:
-                if session.get('min_age_limit', 1000) <= MIN_AGE_LIMIT and session.get(DOSE_TYPE_MAP[DOSE_TYPE], 0) > 0 and \
-                center_details['fee_type'] != 'Paid' and session.get('vaccine') == VACCINE_MAP[VACCINE_PREFERENCE]:
+                if session.get('min_age_limit', 1000) <= MIN_AGE_LIMIT and session.get(DOSE_TYPE_MAP[DOSE_TYPE], 0) > BULK_NOTIFY_MAP[BULK_NOTIFY_ONLY] \
+                        and center_details['fee_type'] != 'Paid' and session.get('vaccine') == VACCINE_MAP[VACCINE_PREFERENCE]:
                     print_data_on_console(center_details)
                     res.append({**center_details, **session})
 

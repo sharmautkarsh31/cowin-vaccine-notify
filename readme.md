@@ -25,9 +25,9 @@
    ```
 
 3. Install pip packages
-```sh
-  pip3 install -r requirements.txt
-  ```
+   ```sh
+   pip3 install -r requirements.txt
+   ```
 
 
 <!-- USAGE EXAMPLES -->

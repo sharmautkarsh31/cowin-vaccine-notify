@@ -15,3 +15,8 @@ VACCINE_MAP = {
     '2' : 'COVISHIELD',
     '3' : 'SPUTNIK'
 }
+
+BULK_NOTIFY_MAP = {
+    "YES": 29,
+    "NO": 0
+}
