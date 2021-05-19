@@ -3,7 +3,7 @@ import datetime
 import pytz as pytz
 
 from config import MIN_AGE_LIMIT, SEARCH_BY, PINCODE, DISTRICT_ID, DOSE_TYPE, VACCINE_PREFERENCE, BULK_NOTIFY_ONLY
-from src.constants import DOSE_TYPE_MAP, VACCINE_MAP, BULK_NOTIFY_MAP
+from constants import DOSE_TYPE_MAP, VACCINE_MAP, BULK_NOTIFY_MAP
 
 location = PINCODE if SEARCH_BY == 'PINCODE' else DISTRICT_ID
 
