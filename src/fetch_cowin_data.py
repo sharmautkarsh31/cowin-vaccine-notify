@@ -28,7 +28,7 @@ def get_url(search_code):
         url = urllib.parse.urljoin(BASE_URL, DISTRICT_SEARCH_URL.format(search_code, get_date()))
     else:
         url = urllib.parse.urljoin(BASE_URL, PINCODE_SEARCH_URL.format(search_code, get_date()))
-    if VACCINE_PREFERENCE != '':
+    if VACCINE_PREFERENCE != '' and VACCINE_PREFERENCE != '0':
         url += "&vaccine={}".format(VACCINE_MAP[VACCINE_PREFERENCE])
     return url
 
